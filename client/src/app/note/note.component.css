@@ -1,0 +1,29 @@
+.complete {
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.incomplete {
+  background-color: lightcoral;
+  border: 2px solid red;
+}
+
+.card {
+  padding-bottom: 2rem;
+  display: inline-block;
+  width: 21rem;
+  height: 21rem;
+}
+
+.btn {
+  margin: 2px 2px 0px 0px;
+}
+
+.buttonWrapper {
+  visibility:hidden;
+  text-align: center;
+}
+
+.card:hover .buttonWrapper {
+  visibility: visible;
+}
