@@ -1,0 +1,16 @@
+<div [ngClass]="{'incomplete':!note.completed && note.id != undefined, 'complete':note.completed && note.id != undefinesd}" class="card" style="">
+  <div class="card-body">
+    <h2 *ngIf="note.title != ''; else noTitle" class="card-title">{{note.title}}</h2>
+    <ng-template #noTitle><h2>Please enter a task name!</h2></ng-template>
+    <p *ngIf="note.description != ''; else noDesc" class="card-text">{{note.description}}</p>
+    <ng-template #noDesc><p>Please enter a task description!</p></ng-template>
+    <p *ngIf="note.user != ''; else noUser">Created by: {{note.user}}</p>
+    <ng-template #noUser><p>Please enter your name!</p></ng-template>
+    <p>Created on: {{note.created}}</p>
+    <div *ngIf="note.id != undefined" class="buttonWrapper">
+      <button class="btn btn-primary" [routerLink]="['/view-note', note.id]">View</button>
+      <button class="btn btn-primary" [routerLink]="['/edit-note', note.id]">Edit</button>
+      <button *ngIf="!note.completed" class="btn btn-primary" (click)="completeNote(note.id)">Complete</button>
+    </div>
+  </div>
+</div>

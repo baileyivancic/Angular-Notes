@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Task Details</h1>
+</div>
+<hr>
+<div class="jumbotron">
+  <div class="container">
+    <label class="label">Title: </label>
+    <input [(ngModel)]="note.title">
+    <div class="buttonWrapper" ><p [ngClass]="{'complete':note.completed, 'incomplete':!note.completed}">{{completeString}}</p></div>
+  </div>
+  <hr>
+  <div class="container">
+    <label class="label">Description: </label>
+    <input [(ngModel)]="note.description">
+    <p class="label">Created by: {{note.user}}</p>
+    <p class="label">Created on: {{note.created}}</p>
+  </div>
+</div>
+<div class="container">
+  <button class="btn btn-success" (click)="updateNote()">Save changes</button>
+  <button class="btn btn-warning" (click)="backClicked()">Discard changes</button>
+  <button class="btn btn-danger" (click)="deleteNote()">Delete Task</button>
+</div>

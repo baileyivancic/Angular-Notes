@@ -1,0 +1,24 @@
+.buttonWrapper {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.align {
+  display: inline-block;
+}
+
+.complete {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 10px;
+  border: 5px solid green;
+  font-weight: bold;
+}
+
+.incomplete {
+  border-radius: 25px;
+  background: lightcoral;
+  padding: 10px;
+  border: 5px solid red;
+  font-weight: bold;
+}

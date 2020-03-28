@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let note of tasks" class="col-6 task"><app-note *ngIf="note.completed === completeFlag" [note]="note" class="task"></app-note></ng-container>
+  </div>
+</div>

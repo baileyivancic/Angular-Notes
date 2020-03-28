@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Task Details</h1>
+</div>
+<hr>
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="align">{{note.title}}</h2>
+    <div class="buttonWrapper" ><p [ngClass]="{'complete':note.completed, 'incomplete':!note.completed}">{{completeString}}</p></div>
+  </div>
+  <hr>
+  <div class="container">
+    <h5>{{note.description}}</h5>
+    <p>Created by user: <b>{{note.user}}</b></p>
+    <p>Created on: <b>{{note.created}}</b></p>
+  </div>
+</div>
+<button class="btn btn-primary" (click)="backClicked()">Return to Tasks</button>
+<button class="btn btn-warning" [routerLink]="['/edit-note', note.id]">Edit note</button>
